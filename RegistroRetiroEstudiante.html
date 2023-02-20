@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <base target="_top">
+  <?!= include('CSS');?>
+</head>
+
+<body class="my-0 vh-100 row justify-content-top align-items-top">
+  <div class="container mt-0">
+    <nav class="navbar navbar-dark bg-primary">
+      <div>
+        <h3 class="text-white">&nbsp;&nbsp;&nbsp;<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"
+            fill="currentColor" class="bi bi-bounding-box-circles" viewBox="0 0 16 16">
+            <path
+              d="M2 1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zM0 2a2 2 0 0 1 3.937-.5h8.126A2 2 0 1 1 14.5 3.937v8.126a2 2 0 1 1-2.437 2.437H3.937A2 2 0 1 1 1.5 12.063V3.937A2 2 0 0 1 0 2zm2.5 1.937v8.126c.703.18 1.256.734 1.437 1.437h8.126a2.004 2.004 0 0 1 1.437-1.437V3.937A2.004 2.004 0 0 1 12.063 2.5H3.937A2.004 2.004 0 0 1 2.5 3.937zM14 1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zM2 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm12 0a1 1 0 1 0 0 2 1 1 0 0 0 0-2z" />
+          </svg>&nbsp;&nbsp;&nbsp;OFFICE-APP</h3>
+      </div>
+      <h3 class="text-white align-rigth">UNIVERSIDAD UMARIANA&nbsp;&nbsp;&nbsp;</h3>
+    </nav>
+    <nav class="navbar navbar-expand-lg" style="background-color: #e3f2fd;">
+      <div class="collapse navbar-collapse" id="navbarColor03">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" href="<?= pubUrl ?>?p=1"><svg xmlns="http://www.w3.org/2000/svg" width="24"
+                height="24" fill="currentColor" class="bi bi-journal-plus" viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                  d="M8 5.5a.5.5 0 0 1 .5.5v1.5H10a.5.5 0 0 1 0 1H8.5V10a.5.5 0 0 1-1 0V8.5H6a.5.5 0 0 1 0-1h1.5V6a.5.5 0 0 1 .5-.5z" />
+                <path
+                  d="M3 0h10a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-1h1v1a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1v1H1V2a2 2 0 0 1 2-2z" />
+                <path
+                  d="M1 5v-.5a.5.5 0 0 1 1 0V5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1zm0 3v-.5a.5.5 0 0 1 1 0V8h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1zm0 3v-.5a.5.5 0 0 1 1 0v.5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1z" />
+              </svg> Nuevo Retiro</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="<?= pubUrl ?>?p=3"><svg xmlns="http://www.w3.org/2000/svg" width="24"
+                height="24" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                <path
+                  d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+              </svg> Buscar Retiro</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                fill="currentColor" class="bi bi-bar-chart-line" viewBox="0 0 16 16">
+                <path
+                  d="M11 2a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v12h.5a.5.5 0 0 1 0 1H.5a.5.5 0 0 1 0-1H1v-3a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v3h1V7a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v7h1V2zm1 12h2V2h-2v12zm-3 0V7H7v7h2zm-5 0v-3H2v3h2z" />
+              </svg> DashBoard</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="<?= pubUrl ?>?p=12"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                height="16" fill="currentColor" class="bi bi-telephone-plus-fill" viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                  d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511zM12.5 1a.5.5 0 0 1 .5.5V3h1.5a.5.5 0 0 1 0 1H13v1.5a.5.5 0 0 1-1 0V4h-1.5a.5.5 0 0 1 0-1H12V1.5a.5.5 0 0 1 .5-.5z" />
+              </svg> Guía Telefónica</a>
+          </li>
+        </ul>
+        <div class="vr"></div>
+        <div class="d-flex">&nbsp;&nbsp;
+          <a class="navbar-brand" href="<?= pubUrl ?>"><strong>Cerrar Sesión</strong></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor03" aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+        </div>
+      </div>
+    </nav>
+    <br/>
+    <div class="row">
+      <center>
+        <div class="col">
+          <h5 class="text-primary"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor"
+              class="bi bi-person-circle" viewBox="0 0 16 16">
+              <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
+              <path fill-rule="evenodd"
+                d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z" />
+            </svg> Formulario para Retiro de Estudiantes UMARIANA</h5>
+        </div>
+      </center>
+    </div>
+
+    <div class="container">
+      <div class="row gx-5">
+
+        <hr class="my-2">
+        <form id="formularioRegistro" name="formularioRegistro" class="needs-validation" method="post"
+          action="<?= pubUrl ?>?p=1">
+          <div class="bg-light p-2 rounded">
+            <!--Fecha solicitud retiro, programa academico -->
+            <div class="row">
+              <div class="col">
+                <div class="mb-3">
+                  <label for="fecsolretiro" class="form-label"><h6 class="my-0">Fecha Solicitud Retiro *</h6></label>
+                  <input type="date" name="fecsolretiro" id="fecsolretiro" class="form-control" placeholder="dd/mm/aa" required>
+                </div>
+              </div>
+              <div class="col">
+                <div class="mb-3">
+                  <label for="progAcademico" class="form-label"><h6 class="my-0">Programa Académico</h6></label>
+                  <select class="form-select" id="progAcademico" name="progAcademico" required>
+                  <option value="" selected>Seleccione una opción de la lista</option>
+                  <? programas1.forEach(programas1=>{?>
+                  <option value="<?= programas1 ?>"><?= programas1 ?></option> 
+                 <? })?>
+              </select>
+                </div>
+              </div>
+            </div>
+            <!--Periodo academico , Semestre y Jornada -->
+            <div class="row">
+              <div class="col">
+                <div class="mb-3">
+                  <label for="periodoAcad" class="form-label"><h6 class="my-0">Periodo Académico</h6></label>
+                  <select class="form-select" id="periodoAcad" name="periodoAcad" required>
+                  <option value="" selected>Seleccione una opción de la lista</option>
+                  <? peracad.forEach(peracad=>{?>
+                  <option value="<?= peracad ?>"><?= peracad ?></option> 
+                 <? })?>
+              </select>
+                </div>
+              </div>
+              <div class="col">
+                <div class="mb-3">
+                  <label for="semestre" class="form-label"><h6 class="my-0">Semestre</h6></label>
+                  <select class="form-select" id="semestre" name="semestre" required>
+                  <option value="" selected>Seleccione una opción</option>
+                  <? semdinamico.forEach(semdinamico=>{?>
+                  <option value="<?= semdinamico ?>"><?= semdinamico ?></option> 
+                 <? })?>
+              </select>
+                </div>
+              </div>
+              <div class="col">
+                <div class="mb-3">
+                  <label for="jornada" class="form-label"><h6 class="my-0">Jornada</h6></label>
+                  <select class="form-select" id="jornada" name="jornada" required>
+                <option value="" selected>Seleccione una opción de la lista</option>
+                <option value="Mañana">Mañana</option>
+                <option value="Noche">Noche</option>
+                <option value="Fin de Semana">Fin de Semana</option>
+              </select>
+                </div>
+              </div>
+              <div class="col">
+                <div class="mb-3">
+                  <label for="plan" class="form-label"><h6 class="my-0">Plan de estudios</h6></label>
+                  <select class="form-select" id="plan" name="plan" required>
+                <option value="" selected>Seleccione una opción de la lista</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>     
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>                             
+              </select>
+                </div>
+              </div>              
+            </div>
+          </div>
+          <hr class="my-1">
+          <!--No. Documento, Tipo Documento y Genero -->
+          <div class="bg-light p-2 rounded">
+            <div class="row">
+              <div class="col">
+                <div class="mb-3">
+                  <label for="identificacion" class="form-label"><h6 class="my-0">No. Identificación *</h6></label>
+                  <input type="text" name="identificacion" id="identificacion" class="form-control" placeholder="Número de Identificación, sin caracteres especiales" required>
+                </div>
+              </div>
+              <div class="col">
+                <div class="mb-3">
+                  <label for="tipoDocumento" class="form-label"><h6 class="my-0">Tipo Documento</h6></label>
+                  <select class="form-select" id="tipoDocumento" name="tipoDocumento" required>
+                  <option value="" selected>Seleccione una opción de la lista</option>
+                  <? tipodoc.forEach(tipodoc=>{?>
+                  <option value="<?= tipodoc ?>"><?= tipodoc ?></option> 
+                 <? })?>
+              </select>
+                </div>
+              </div>
+              <div class="col">
+                <div class="mb-3">
+                  <label for="genero" class="form-label"><h6 class="my-0">Genero</h6></label>
+                  <select class="form-select" id="genero" name="genero" required>
+                <option value="" selected>Seleccione una opción de la lista</option> 
+                <option value="Femenino">Femenino</option>
+                <option value="Masculino">Masculino</option>
+              </select>
+                </div>
+              </div>
+            </div>
+
+            <!--apellidos - nombres, codigo , celular -->
+            <div class="row">
+              <div class="col">
+                <div class="mb-3">
+                  <label for="apellidosNombres" class="form-label"><h6 class="my-0">Apellidos - Nombres *</h6></label>
+                  <input type="text" name="apellidosNombres" id="apellidosNombres" class="form-control text-uppercase" placeholder="Apellidos y nombres" required>
+                </div>
+              </div>
+              <div class="col">
+                <div class="mb-3">
+                  <label for="codigoEstudiantil" class="form-label"><h6 class="my-0">Código Estudiantil *</h6></label>
+                  <input type="text" name="codigoEstudiantil" id="codigoEstudiantil" class="form-control text-uppercase" placeholder="Codigo Estudiantil" required>
+                </div>
+              </div>
+              <div class="col">
+                <div class="mb-3">
+                  <label for="celular" class="form-label"><h6 class="my-0">Celular *</h6></label>
+                  <input type="text" name="celular" id="celular" class="form-control" placeholder="Numero de celular" required>
+                </div>
+              </div>
+            </div>
+            <!-- ingreso correo electronico -->
+            <div class="row">
+              <div class="col-md-3 mb-3">
+                <div>
+                  <label for="correoElectronico" class="form-label"><h6 class="my-0">Correo Electrónico *</h6></label>
+                  <input type="email" name="correoElectronico" id="correoElectronico" class="form-control" placeholder="name@example.com" required>
+                </div>
+              </div>
+              <div class="col">
+                <!--Cargar documento-->
+                <div class="row">
+                  <label class="form-label"><h6 class="my-0">Las notas a cargar deben encontrarse en formato imagen (JPG, PNG)</h6></label>
+                  <div class="col">
+                    <div>
+                      <input type="file" id="file2" class="form-control" required>
+                    </div>
+                  </div>
+                  <div class="col-5">
+                    <div>
+                      <input type="button" id="upload2" value="Cargar Imagen" onclick="uploadFiles2()" class="btn btn-primary">
+                      <!--prueba de ventana lateral-->
+                      <a class="btn btn-info" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button"
+                        aria-controls="offcanvasExample" title="Ayuda">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                          class="bi bi-layout-text-window-reverse" viewBox="0 0 16 16">
+                          <path
+                            d="M13 6.5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h5a.5.5 0 0 0 .5-.5zm0 3a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h5a.5.5 0 0 0 .5-.5zm-.5 2.5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1 0-1h5z" />
+                          <path
+                            d="M14 0a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h12zM2 1a1 1 0 0 0-1 1v1h14V2a1 1 0 0 0-1-1H2zM1 4v10a1 1 0 0 0 1 1h2V4H1zm4 0v11h9a1 1 0 0 0 1-1V4H5z" />
+                        </svg>
+                      </a>
+                      <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample"
+                        aria-labelledby="offcanvasExampleLabel">
+                        <div class="offcanvas-header">
+                          <h5 class="offcanvas-title" id="offcanvasExampleLabel">Pasos</h5>
+                          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                        </div>
+                        <div class="offcanvas-body">
+                          <div>
+                            Para realizar este proceso debe tener activo Ruah Académico en su navegador
+                          </div>
+                          <div class="dropdown mt-3">
+                            <ol>
+                              <li>En otra pestaña de su navegador, acceda a Ruah Académico</li>
+                              <li>Haga clic en el botón al final de este instructivo, para ir a la consulta de notas del
+                                estudiante</a></li>
+                              <li>Digite el código del estudiante</li>
+                              <li>Una vez tenga en pantalla la interfaz del registro de notas del estudiante, presione
+                                la tecla de Windows y en el área de búsqueda digite la palabra <b>Recortes</b> </li>
+                              <li>Esto habilitará un aplicativo que permite seleccionar el área que se requiere recortar
+                                y guardarla en formato JPG o PNG</li>
+                              <li>Con la imagen del registro de notas del estudiante, haga clic en el botón Examinar,
+                                seleccione la imagen y complete el proceso haciendo clic en el botón
+                                <a class="btn btn-primary" role="button">
+                                  Cargar Imagen
+                                </a>
+                              </li>
+                            </ol>
+                          </div>
+                          <a class="btn btn-primary" href="https://ruah.UMARIANA.edu.co/notas-estudiantes"
+                            role="button" target="_blank">
+                            Ir a consultar notas Ruah Académico
+                          </a>
+                        </div>
+                      </div>
+                      <!-- Fin prueba ventana lateral-->
+                    </div>
+
+                  </div>
+                  <p id="msg3"></p>
+                  <input type="text" name="rutadoc2" id="msg4" hidden>
+                </div>
+                <!--Fin Cargar documento-->
+              </div>
+            </div>
+            <!-- fin ingreso correo electronico-->
+          </div>
+          <hr class="my-1">
+          <div class="bg-light p-2 rounded">
+            <!-- Novedades Notas, con o sin efectos, Activar revision siguiente dependencia-->
+            <div class="row">
+              <div class="col">
+                <div class="mb-3">
+                  <label for="novedadesNotas" class="form-label"><h6 class="my-0">¿Registra novedades de notas?</h6></label>
+                  <select class="form-select" id="novedadesNotas" name="novedadesNotas" required>
+                <option value="" selected>Seleccione una opción de la lista</option> 
+                <option value="Si">Si</option>
+                <option value="No">No</option>
+              </select>
+                </div>
+              </div>
+              </div>
+              <!-- Revision demaspartes -->
+              <div class="col">
+                <div class="mb-3">
+                  <div class="form-check">
+                    <label for="demaspartes" class="form-chek-label"><h6 class="my-0">¿Activar revisión de las demas partes?</h6></label>
+                    <input type="checkbox" class="form-check-input" name="demaspartes"  id="demaspartes" checked>
+                  </div>
+                  <p class="text-justify"> La opción debe quedar chequeada, si necesita que siga la secuencia de
+                    revisión entre las dependencias</p>
+                </div>
+              </div>
+              <!-- Fin Revision demaspartes -->
+            </div>
+
+            <!--Cargar documento-->
+            <div class="row">
+              <label class="form-label"><h6 class="my-0">Cargar documento de solicitud de retiro (Este debe encontrarse en formato PDF)</h6></label>
+              <div class="col">
+                <div class="mb-3">
+                  <input type="file" id="file" class="form-control" required>
+                </div>
+              </div>
+              <div class="col">
+                <div class="mb-3">
+                  <input type="button" id="upload" value="Cargar Documento PDF" onclick="uploadFiles()" class="btn btn-primary">
+                </div>
+              </div>
+              <p id="msg"></p>
+              <input type="text" name="rutadoc" id="msg1" hidden>
+            </div>
+            <!--Observaciones Programa-->
+            <div class="mb-3">
+              <label for="obsPrograma" class="form-label"><h6 class="my-0">Observaciones Programa</h6><p id="msg2"></p></label>
+              <textarea class="form-control" id="obsPrograma" name="obsPrograma" rows="3" required></textarea>
+            </div>
+          </div>
+          <hr class="my-4">
+          <!--Boton de envio de informacion -->
+          <button class="w-100 btn btn-primary btn-lg" type="submit" id="liveToastBtn"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-save2" viewBox="0 0 16 16">
+  <path d="M2 1a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H9.5a1 1 0 0 0-1 1v4.5h2a.5.5 0 0 1 .354.854l-2.5 2.5a.5.5 0 0 1-.708 0l-2.5-2.5A.5.5 0 0 1 5.5 6.5h2V2a2 2 0 0 1 2-2H14a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h2.5a.5.5 0 0 1 0 1H2z"/>
+</svg> Guardar Retiro de Estudiante : Programa Académico </button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mensaje Toast -->
+  <div class="toast-container position-fixed bottom-0 end-0 p-3">
+    <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+      <div class="toast-header">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-send"
+          viewBox="0 0 16 16">
+          <path
+            d="M15.854.146a.5.5 0 0 1 .11.54l-5.819 14.547a.75.75 0 0 1-1.329.124l-3.178-4.995L.643 7.184a.75.75 0 0 1 .124-1.33L15.314.037a.5.5 0 0 1 .54.11ZM6.636 10.07l2.761 4.338L14.13 2.576 6.636 10.07Zm6.787-8.201L1.591 6.602l4.339 2.76 7.494-7.493Z" />
+        </svg>
+        <strong class="me-auto">Enviando Correo</strong>
+        <small>Procesando Información</small>
+        <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+      </div>
+      <div class="toast-body">
+        Enviando correo a la Jefatura de Crédito y Cartera!.
+      </div>
+    </div>
+  </div>
+  <!-- Fin Mensaje Toast -->
+  <!-- Mensaje desmarcar secuencia -->
+  <div class="toast-container position-fixed bottom-0 end-0 p-3">
+    <div id="liveToast1" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+      <div class="toast-header">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-send"
+          viewBox="0 0 16 16">
+          <path
+            d="M15.854.146a.5.5 0 0 1 .11.54l-5.819 14.547a.75.75 0 0 1-1.329.124l-3.178-4.995L.643 7.184a.75.75 0 0 1 .124-1.33L15.314.037a.5.5 0 0 1 .54.11ZM6.636 10.07l2.761 4.338L14.13 2.576 6.636 10.07Zm6.787-8.201L1.591 6.602l4.339 2.76 7.494-7.493Z" />
+        </svg>
+        <strong class="me-auto">OfficeApp</strong>
+        <small>Dsoftware</small>
+        <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+      </div>
+      <div class="toast-body">
+        <h5 class="my-0">Activar envio a la siguiente dependencia</h5>
+      </div>
+    </div>
+  </div>
+  <!-- Fin Mensaje desmarcar secuencia -->
+  <!-- Mensaje desmarcar secuencia -->
+  <div class="toast-container position-fixed bottom-0 end-0 p-3">
+    <div id="liveToast2" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+      <div class="toast-header">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-send"
+          viewBox="0 0 16 16">
+          <path
+            d="M15.854.146a.5.5 0 0 1 .11.54l-5.819 14.547a.75.75 0 0 1-1.329.124l-3.178-4.995L.643 7.184a.75.75 0 0 1 .124-1.33L15.314.037a.5.5 0 0 1 .54.11ZM6.636 10.07l2.761 4.338L14.13 2.576 6.636 10.07Zm6.787-8.201L1.591 6.602l4.339 2.76 7.494-7.493Z" />
+        </svg>
+        <strong class="me-auto">OfficeApp</strong>
+        <small>Dsoftware</small>
+        <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+      </div>
+      <div class="toast-body">
+        <h5 class="my-0">Anular retiro y enviar correo notificando al programa sobre esta decisión</h5>
+      </div>
+    </div>
+  </div>
+  <!-- Fin Mensaje desmarcar secuencia -->
+
+
+  <!-- Fin Mensaje Envio -->
+  <br><br>
+  <script>
+    var fileUploader = document.getElementById("file");
+      var msg = document.getElementById("msg");//for display msg de etiqueta <p>
+      function uploadFiles() { 
+        estado = document.getElementById('file').value;
+        if(estado != ''){        
+          msg.innerHTML = "Subiendo archivo..."; //change msg text when is uploading
+          var file = fileUploader.files[0];    //file
+          var reader = new FileReader();       //reader for convert the file
+          reader.readAsDataURL(file)           //convert file to Base64
+          reader.onload = function() {         //necessary to access the result (promise)
+            var rawLog = reader.result.split(',')[1];  //get only de Base64 part of file
+            google.script.run                  
+              .withSuccessHandler(function (a) {
+                msg.innerHTML = "<h6 class='my-0'>URL arhivo cargado:</h6>  <a href="+a+" target='_blank'>"+a+"</a>" ;  //if success, change our msg
+                msg1.value =a; //mg1 del input
+              })
+              .uploadFilesToGoogleDrive(rawLog, file.name, file.type); // call the function in google side, and pass the data in Base64,name and type
+          };
+        }
+        else{
+          swal('Error','Debe seleccionar un archivo \n antes de hacer clic sobre el boton Cargar','error');
+        }
+    }
+
+    var fileUploader2 = document.getElementById("file2");
+      var msgimg = document.getElementById("msg3");//for display msg
+      function uploadFiles2() { 
+        estado = document.getElementById('file2').value;
+        if(estado != ''){
+          msgimg.innerHTML = "Subiendo archivo de imagen..."; //change msg text when is uploading
+          var fileimg = fileUploader2.files[0];    //file
+          var readerimg = new FileReader();       //reader for convert the file
+          readerimg.readAsDataURL(fileimg)           //convert file to Base64
+          readerimg.onload = function() {         //necessary to access the result (promise)
+            var rawLogimg = readerimg.result.split(',')[1];  //get only de Base64 part of file
+            google.script.run                  
+              .withSuccessHandler(function (a) {
+                var rutaver = "https://drive.google.com/uc?export=view&id="+a.split('/')[5];
+                msgimg.innerHTML = "<h6 class='my-0'>URL arhivo cargado:</h6>  <a href="+a+" target='_blank'>"+a+"</a><br><img src='"+rutaver+"' border='0' width='80%' height='80%'>" ;  //if success, change our msg
+                msg4.value =a; // msg4 del input
+              })
+              .uploadFilesToGoogleDrive(rawLogimg, fileimg.name, fileimg.type); // call the function in google side, and pass the data in Base64,name and type
+          };
+        }//fin validacion estado
+        else{
+          swal('Error','Debe seleccionar un archivo \n antes de hacer clic sobre el boton Cargar','error');
+        }
+    }
+
+   
+//Se valida la aparicion del toast siempre y cuando el formulario este diligenciado
+  var forms = document.querySelectorAll('.needs-validation')
+  const toastTrigger = document.getElementById('liveToastBtn')
+  const toastLiveExample = document.getElementById('liveToast')
+  if (toastTrigger) {
+    toastTrigger.addEventListener('click', () => {
+      if(forms[0].checkValidity()){
+        const toast = new bootstrap.Toast(toastLiveExample)
+        toast.show()
+      }
+  })
+} 
+
+  const toastTrigger2 = document.getElementById('demaspartes')
+  const toastLiveProc = document.getElementById('liveToast1')
+  const toastLiveProc2 = document.getElementById('liveToast2')
+  estado = document.getElementById('demaspartes').value;
+  console.log(document.getElementById('demaspartes').value);
+  var msg2 = document.getElementById('msg2');//for display msg
+    toastTrigger2.addEventListener('click', () => {
+    const toast1 = new bootstrap.Toast(toastLiveProc2)
+    const toast2 = new bootstrap.Toast(toastLiveProc)
+    if(estado == 'on'){
+    msg2.innerHTML = "<h6 class='my-0 text-danger'>Describa en esta sección, porqué se anula la solicitud de retiro del estudiante</h6>";
+    estado='off';
+    toast1.show()
+    toast2.hide()
+    }
+    else{
+      estado='on';
+      msg2.innerHTML="";
+      toast2.show() 
+      toast1.hide()     
+    }
+  })
+
+  </script>
+
+  <?!= include('JS');?>
+</body>
+
+</html>

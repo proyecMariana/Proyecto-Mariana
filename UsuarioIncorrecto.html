@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <base target="_top">
+  <?!= include('CSS');?>
+    <style type="text/css">
+    .divider:after,
+    .divider:before {
+      content: "";
+      flex: 1;
+      height: 1px;
+      background: #eee;
+    }
+
+    .h-custom {
+      height: calc(100% - 73px);
+    }
+
+    @media (max-width: 450px) {
+      .h-custom {
+        height: 100%;
+      }
+    }
+  </style>
+</head>
+
+<body class="m-0 vh-100 row justify-content-center align-items-center">
+  <div class="row justify-content-center align-items-center minh-100">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="container justify-content-center align-items-center">
+          <div class="bg-light w-50 p-5 rounded mx-auto align-items-center">
+            <h3 align="center">OfficeApp - UMARIANA</h3>
+            <br/>
+            <div id="output2" >
+            <center>
+<svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" fill="currentColor" class="bi bi-lock" viewBox="0 0 16 16">
+  <path d="M8 1a2 2 0 0 1 2 2v4H6V3a2 2 0 0 1 2-2zm3 6V3a3 3 0 0 0-6 0v4a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2zM5 8h6a1 1 0 0 1 1 1v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1z"/>
+</svg>
+                <br>
+                <h5>Usuario Incorrecto!!</h5>
+            </center>    
+            </div>
+            <br>
+            <a href="<?= pubUrl ?>">
+              <button type="submit" class="w-100 btn btn-primary btn-lg">Intentar de Nuevo</button>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  <?!= include('JS');?>
+  <script>
+
+  </script>
+</body>
+
+</html>

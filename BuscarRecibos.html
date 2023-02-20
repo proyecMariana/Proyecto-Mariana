@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <base target="_top">
+  <?!= include('CSS');?>
+</head>
+
+<body class="my-0 vh-100 row justify-content-top align-items-top">
+  <div class="container mt-0">
+    <nav class="navbar navbar-dark bg-primary">
+      <div>
+        <h3 class="text-white">&nbsp;&nbsp;&nbsp;<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"
+            fill="currentColor" class="bi bi-bounding-box-circles" viewBox="0 0 16 16">
+            <path
+              d="M2 1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zM0 2a2 2 0 0 1 3.937-.5h8.126A2 2 0 1 1 14.5 3.937v8.126a2 2 0 1 1-2.437 2.437H3.937A2 2 0 1 1 1.5 12.063V3.937A2 2 0 0 1 0 2zm2.5 1.937v8.126c.703.18 1.256.734 1.437 1.437h8.126a2.004 2.004 0 0 1 1.437-1.437V3.937A2.004 2.004 0 0 1 12.063 2.5H3.937A2.004 2.004 0 0 1 2.5 3.937zM14 1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zM2 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm12 0a1 1 0 1 0 0 2 1 1 0 0 0 0-2z" />
+          </svg>&nbsp;&nbsp;&nbsp;OfficeApp</h3>
+      </div>
+      <h3 class="text-white align-rigth">UNIVERSIDAD UMARIANA&nbsp;&nbsp;&nbsp;</h3>
+    </nav>
+    <nav class="navbar navbar-expand-lg" style="background-color: #e3f2fd;">
+      <div class="collapse navbar-collapse" id="navbarColor03">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" href="<?= pubUrl ?>?p=15"><svg xmlns="http://www.w3.org/2000/svg" width="24"
+                height="24" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                <path
+                  d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+              </svg> Buscar Recibo generado</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                fill="currentColor" class="bi bi-bar-chart-line" viewBox="0 0 16 16">
+                <path
+                  d="M11 2a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v12h.5a.5.5 0 0 1 0 1H.5a.5.5 0 0 1 0-1H1v-3a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v3h1V7a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v7h1V2zm1 12h2V2h-2v12zm-3 0V7H7v7h2zm-5 0v-3H2v3h2z" />
+              </svg> DashBoard</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="<?= pubUrl ?>?p=12"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                height="16" fill="currentColor" class="bi bi-telephone-plus-fill" viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                  d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511zM12.5 1a.5.5 0 0 1 .5.5V3h1.5a.5.5 0 0 1 0 1H13v1.5a.5.5 0 0 1-1 0V4h-1.5a.5.5 0 0 1 0-1H12V1.5a.5.5 0 0 1 .5-.5z" />
+              </svg> Guía Telefónica</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active"
+              href="<?= pubUrl ?>?p=13"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABmJLR0QA/wD/AP+gvaeTAAABo0lEQVRIic3VzWoUQRAH8J8reBMUMevBj4cwkCiC0WfwlJO3gA+xevUWiAriwYNPIOIKihcFP5K9CJ4Dkt2LoJDkuMp4mBps2+ldRwJaUMx09b8+urqriv+MloMPhHroJ+vzmAYvJvJ+YDvTPVQYYoBxrKv4H8Rehbt/4+B9YnAev+tq/Az2OjjYw+l5RnvqtIyw38F46mSEOwp3cqqg+Bz3sZPIvuIFPhR0FkqnGGbA9ZAfw0l8Cfl1HMbrFuPDWWm6mYEv4yLexv5jbEYKbhWiH5SML2KSgVcj8rXAbOECLuFbwcHYr3VCKE1bwNu4gnNxukc4jk8F4w1PsZQ6WC44yCM7gYeRhrNYiSDmOmhSNG4BV/iOq4HZDPwNdZtYzbA76rbSSvklN3w79l/hSfy/iZOvZNjiJfP7M63UxXME1/ysgT6Ohs5Ghn9aMl4qtI/qovqcyCZ4gJcFndZC66nLfKRbH2p4N3Q3cGhWmqgbVxcnu/6g2eV0IO161iQaxbcZOJNkrxk4z2K91TX6xnl6WenITN/5wpxAO9GSlgr9p/QDn0PzvQrrNU0AAAAASUVORK5CYII="> Tarifas Matrícula 1-2023</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active"
+              href="<?= pubUrl ?>?p=14"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABmJLR0QA/wD/AP+gvaeTAAABo0lEQVRIic3VzWoUQRAH8J8reBMUMevBj4cwkCiC0WfwlJO3gA+xevUWiAriwYNPIOIKihcFP5K9CJ4Dkt2LoJDkuMp4mBps2+ldRwJaUMx09b8+urqriv+MloMPhHroJ+vzmAYvJvJ+YDvTPVQYYoBxrKv4H8Rehbt/4+B9YnAev+tq/Az2OjjYw+l5RnvqtIyw38F46mSEOwp3cqqg+Bz3sZPIvuIFPhR0FkqnGGbA9ZAfw0l8Cfl1HMbrFuPDWWm6mYEv4yLexv5jbEYKbhWiH5SML2KSgVcj8rXAbOECLuFbwcHYr3VCKE1bwNu4gnNxukc4jk8F4w1PsZQ6WC44yCM7gYeRhrNYiSDmOmhSNG4BV/iOq4HZDPwNdZtYzbA76rbSSvklN3w79l/hSfy/iZOvZNjiJfP7M63UxXME1/ysgT6Ohs5Ghn9aMl4qtI/qovqcyCZ4gJcFndZC66nLfKRbH2p4N3Q3cGhWmqgbVxcnu/6g2eV0IO161iQaxbcZOJNkrxk4z2K91TX6xnl6WenITN/5wpxAO9GSlgr9p/QDn0PzvQrrNU0AAAAASUVORK5CYII="> Generar Recibo Pago Anticipado</a>
+          </li>          
+        </ul>
+        <!-- Example single danger button -->
+        <div class="btn-group">
+          <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-layout-text-window" viewBox="0 0 16 16">
+  <path d="M3 6.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5zm0 3a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5zm.5 2.5a.5.5 0 0 0 0 1h5a.5.5 0 0 0 0-1h-5z"/>
+  <path d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm12 1a1 1 0 0 1 1 1v1H1V2a1 1 0 0 1 1-1h12zm1 3v10a1 1 0 0 1-1 1h-2V4h3zm-4 0v11H2a1 1 0 0 1-1-1V4h10z"/>
+</svg>  Acuerdos UMARIANA
+  </button> &nbsp;&nbsp;
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="https://drive.google.com/file/d/1dztA3AkHBAFCTpgISsQihTBEU3cHPgu2/view?usp=sharing" target="_blank">C.A. Pregrado 1-2023</a></li>
+            <li><a class="dropdown-item" href="https://drive.google.com/file/d/1FMxf9Q9vWX5i6a9Bmhon6qK1pp8qs-hd/view?usp=sharing" target="_blank">C.A. Posgrado 1-2023</a></li>
+            <li><a class="dropdown-item" href="https://drive.google.com/file/d/13HHsZqkB31ynj6E2c4U7XXslRX4a1e9E/view?usp=sharing" target="_blank">C.A. Pregrado 2-2022</a></li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+            <li><a class="dropdown-item" href="https://drive.google.com/file/d/1HLjnBIZ-Yma6AmM80YSIofk9ztEWYmFP/view?usp=sharing" target="_blank">Derechos Pecuniarios 2013</a></li>
+            <li><a class="dropdown-item" href="https://drive.google.com/file/d/1K4QFjKk_CVjx-PQ_lUTGf9PPe7_Bd9He/view" target="_blank">Reglamento Estudiantil</a></li>
+            <li><a class="dropdown-item" href="https://drive.google.com/file/d/1MorqTieBVWiLjwHi-WIy8KMi2BgLx-pX/view" target="_blank">Material Estudiantes</a></li>
+            <li><a class="dropdown-item" href="https://docs.google.com/presentation/d/1bFj9SvtwruRS4iz_qol4LBgHjQ8cnTLbTT82j_W-L3A" target="_blank">Mat.Retiro Estudiantil</a></li>             
+          </ul>
+        </div>
+        <!-- Fin generacion boton -->        
+        <div class="vr"></div>
+        <div class="d-flex">&nbsp;&nbsp;
+          <a class="navbar-brand" href="<?= pubUrl ?>"><strong>Cerrar Sesión</strong></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor03" aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+        </div>
+      </div>
+    </nav>
+    <div class="container mt-5">
+      <h5 class="text-primary">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-people"
+          viewBox="0 0 16 16">
+          <path
+            d="M15 14s1 0 1-1-1-4-5-4-5 3-5 4 1 1 1 1h8zm-7.978-1A.261.261 0 0 1 7 12.996c.001-.264.167-1.03.76-1.72C8.312 10.629 9.282 10 11 10c1.717 0 2.687.63 3.24 1.276.593.69.758 1.457.76 1.72l-.008.002a.274.274 0 0 1-.014.002H7.022zM11 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm3-2a3 3 0 1 1-6 0 3 3 0 0 1 6 0zM6.936 9.28a5.88 5.88 0 0 0-1.23-.247A7.35 7.35 0 0 0 5 9c-4 0-5 3-5 4 0 .667.333 1 1 1h4.216A2.238 2.238 0 0 1 5 13c0-1.01.377-2.042 1.09-2.904.243-.294.526-.569.846-.816zM4.92 10A5.493 5.493 0 0 0 4 13H1c0-.26.164-1.03.76-1.724.545-.636 1.492-1.256 3.16-1.275zM1.5 5.5a3 3 0 1 1 6 0 3 3 0 0 1-6 0zm3-2a2 2 0 1 0 0 4 2 2 0 0 0 0-4z" />
+        </svg>
+        Buscar estudiantes por solicitud de recibo de pago anticipado
+      </h5>
+      <br/>
+      <div class="row d-flex justify-content-center mb-3">
+        <div class="col">
+          <input type="text" class="form-control" id="txt_codigoEstudiantil" placeholder="Ingrese el codigo a buscar" aria-label="Código Estudiantil">
+        </div>
+        <div class="col-1">
+          <button type="button" class="btn btn-primary" onclick="buscarRegistro()"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+  <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+</svg> Buscar</button>
+        </div>
+        <br>
+      </div>
+      <hr class="my-1">
+      <table id="manteniemientosTable" class="table table-striped">
+        <thead>
+          <tr>
+            <th>Id</th>
+            <th>Fecha Solicitud Retiro</th>
+            <th>Periodo Académico</th>
+            <th>Identificación</th>
+            <th>Código Estudiantil</th>
+            <th>Apellidos - Nombres</th>
+            <th>Programa Académico</th>
+            <th>Opciones</th>
+          </tr>
+        </thead>
+        <tbody id="manteniemientosTableBody">
+          <!-- aqui se insertara toda la informacion que la traigamos de los datos de busqueda-->
+        </tbody>
+      </table>
+    </div>
+
+    <template id="manteniemientosRow">
+      <tr>
+        <td class="mantenimientosId" align="center" valign="middle"></td>
+        <td class="mantenimientosFecha"></td>
+        <td class="mantenimientosPeriodo"></td>
+        <td class="mantenimientosIdentifacion"></td>
+        <td class="mantenimientosCodigo"></td>
+        <td class="mantenimientosApellidos"></td>
+        <td class="mantenimientosPrograma" valign="middle"></td>
+        <td class="mantenimientosBotones" valign="middle">
+          <a class="final-href" target="_blank" title="Documento Final Retiro Estudiantil"><button type="button" class="btn btn-success"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-filetype-pdf" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M14 4.5V14a2 2 0 0 1-2 2h-1v-1h1a1 1 0 0 0 1-1V4.5h-2A1.5 1.5 0 0 1 9.5 3V1H4a1 1 0 0 0-1 1v9H2V2a2 2 0 0 1 2-2h5.5L14 4.5ZM1.6 11.85H0v3.999h.791v-1.342h.803c.287 0 .531-.057.732-.173.203-.117.358-.275.463-.474a1.42 1.42 0 0 0 .161-.677c0-.25-.053-.476-.158-.677a1.176 1.176 0 0 0-.46-.477c-.2-.12-.443-.179-.732-.179Zm.545 1.333a.795.795 0 0 1-.085.38.574.574 0 0 1-.238.241.794.794 0 0 1-.375.082H.788V12.48h.66c.218 0 .389.06.512.181.123.122.185.296.185.522Zm1.217-1.333v3.999h1.46c.401 0 .734-.08.998-.237a1.45 1.45 0 0 0 .595-.689c.13-.3.196-.662.196-1.084 0-.42-.065-.778-.196-1.075a1.426 1.426 0 0 0-.589-.68c-.264-.156-.599-.234-1.005-.234H3.362Zm.791.645h.563c.248 0 .45.05.609.152a.89.89 0 0 1 .354.454c.079.201.118.452.118.753a2.3 2.3 0 0 1-.068.592 1.14 1.14 0 0 1-.196.422.8.8 0 0 1-.334.252 1.298 1.298 0 0 1-.483.082h-.563v-2.707Zm3.743 1.763v1.591h-.79V11.85h2.548v.653H7.896v1.117h1.606v.638H7.896Z"/>
+</svg></button></a>
+        </td>
+      </tr>
+    </template>
+
+    <?!= include('JS');?>
+
+    <script>
+      function buscarRegistro(){
+      
+    const codigoEstudiante = document.getElementById("txt_codigoEstudiantil").value;
+    google.script.run
+    .withSuccessHandler(info =>{
+        let tableBody = document.getElementById("manteniemientosTableBody");
+        tableBody.innerHTML = "";
+        if(info.length > 0){
+
+          info.forEach( mantenimiento =>{
+            //console.log('Dato 1:'+mantenimiento[18]+' Dato2: '+mantenimiento[35]+' Dato3: '+mantenimiento[37]);
+            var urlconx='<?= pubUrl ?>';
+            const template = document.getElementById("manteniemientosRow");
+            const templateRow = template.content;
+            let tr = templateRow.cloneNode(true);
+            let colId = tr.querySelector(".mantenimientosId");
+            let colFecha = tr.querySelector(".mantenimientosFecha");
+            let colPeriodo = tr.querySelector(".mantenimientosPeriodo");
+            let colIdentificacion = tr.querySelector(".mantenimientosIdentifacion");
+            let colCodigo = tr.querySelector(".mantenimientosCodigo");
+            let colApenom = tr.querySelector(".mantenimientosApellidos");
+            let colPrograma = tr.querySelector(".mantenimientosPrograma");
+            let coladfinal = tr.querySelector(".final-href");
+
+            colId.innerHTML  = '<h3>'+mantenimiento[0]+'</h3>';
+            colFecha.textContent = mantenimiento[1];
+            colPeriodo.textContent = mantenimiento[2];
+            colIdentificacion.textContent = mantenimiento[6];
+            colCodigo.textContent = mantenimiento[8];
+            colApenom.textContent = mantenimiento[7];
+            colPrograma.textContent = mantenimiento[3];
+            if(mantenimiento[23] != '') coladfinal.href = mantenimiento[23];
+            else { 
+              swal('Error en documento','No existe factura generada para este codigo','error');
+                          }
+            //console.log('Datos a revisar:'+mantenimiento[23]+'--'+mantenimiento[23])
+ 
+            tableBody.appendChild(tr);
+          })
+        }else {
+          swal('Error en busqueda','No se encontro coincidencia con el codigo buscado','error');
+        }
+    })
+    .buscarRecibo(codigoEstudiante.toString().toLocaleUpperCase());
+   
+  }//Fin buscar registro
+    </script>
+</body>
+
+</html>

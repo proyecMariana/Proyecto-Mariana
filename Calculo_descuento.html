@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <base target="_top">
+  <?!= include('CSS');?>
+</head>
+
+<body class="my-0 vh-100 row justify-content-top align-items-top">
+  <div class="container mt-0">
+    <nav class="navbar navbar-dark bg-primary">
+      <div>
+        <h3 class="text-white">&nbsp;&nbsp;&nbsp;<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"
+            fill="currentColor" class="bi bi-bounding-box-circles" viewBox="0 0 16 16">
+            <path
+              d="M2 1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zM0 2a2 2 0 0 1 3.937-.5h8.126A2 2 0 1 1 14.5 3.937v8.126a2 2 0 1 1-2.437 2.437H3.937A2 2 0 1 1 1.5 12.063V3.937A2 2 0 0 1 0 2zm2.5 1.937v8.126c.703.18 1.256.734 1.437 1.437h8.126a2.004 2.004 0 0 1 1.437-1.437V3.937A2.004 2.004 0 0 1 12.063 2.5H3.937A2.004 2.004 0 0 1 2.5 3.937zM14 1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zM2 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm12 0a1 1 0 1 0 0 2 1 1 0 0 0 0-2z" />
+          </svg>&nbsp;&nbsp;&nbsp;OFFICE-APP</h3>
+      </div>
+      <h3 class="text-white align-rigth">UNIVERSIDAD UMARIANA&nbsp;&nbsp;&nbsp;</h3>
+    </nav>
+    <nav class="navbar navbar-expand-lg" style="background-color: #e3f2fd;">
+      <div class="collapse navbar-collapse" id="navbarColor03">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" href="<?= pubUrl ?>?p=15"><svg xmlns="http://www.w3.org/2000/svg" width="24"
+                height="24" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                <path
+                  d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+              </svg> Buscar Recibo pago Anticipado</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                fill="currentColor" class="bi bi-bar-chart-line" viewBox="0 0 16 16">
+                <path
+                  d="M11 2a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v12h.5a.5.5 0 0 1 0 1H.5a.5.5 0 0 1 0-1H1v-3a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v3h1V7a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v7h1V2zm1 12h2V2h-2v12zm-3 0V7H7v7h2zm-5 0v-3H2v3h2z" />
+              </svg> DashBoard</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="<?= pubUrl ?>?p=12"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                height="16" fill="currentColor" class="bi bi-telephone-plus-fill" viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                  d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511zM12.5 1a.5.5 0 0 1 .5.5V3h1.5a.5.5 0 0 1 0 1H13v1.5a.5.5 0 0 1-1 0V4h-1.5a.5.5 0 0 1 0-1H12V1.5a.5.5 0 0 1 .5-.5z" />
+              </svg> Guía Telefónica</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active"
+              href="<?= pubUrl ?>?p=13"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABmJLR0QA/wD/AP+gvaeTAAABo0lEQVRIic3VzWoUQRAH8J8reBMUMevBj4cwkCiC0WfwlJO3gA+xevUWiAriwYNPIOIKihcFP5K9CJ4Dkt2LoJDkuMp4mBps2+ldRwJaUMx09b8+urqriv+MloMPhHroJ+vzmAYvJvJ+YDvTPVQYYoBxrKv4H8Rehbt/4+B9YnAev+tq/Az2OjjYw+l5RnvqtIyw38F46mSEOwp3cqqg+Bz3sZPIvuIFPhR0FkqnGGbA9ZAfw0l8Cfl1HMbrFuPDWWm6mYEv4yLexv5jbEYKbhWiH5SML2KSgVcj8rXAbOECLuFbwcHYr3VCKE1bwNu4gnNxukc4jk8F4w1PsZQ6WC44yCM7gYeRhrNYiSDmOmhSNG4BV/iOq4HZDPwNdZtYzbA76rbSSvklN3w79l/hSfy/iZOvZNjiJfP7M63UxXME1/ysgT6Ohs5Ghn9aMl4qtI/qovqcyCZ4gJcFndZC66nLfKRbH2p4N3Q3cGhWmqgbVxcnu/6g2eV0IO161iQaxbcZOJNkrxk4z2K91TX6xnl6WenITN/5wpxAO9GSlgr9p/QDn0PzvQrrNU0AAAAASUVORK5CYII="> Tarifas Matrícula 1-2023</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active"
+              href="<?= pubUrl ?>?p=14"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABmJLR0QA/wD/AP+gvaeTAAABo0lEQVRIic3VzWoUQRAH8J8reBMUMevBj4cwkCiC0WfwlJO3gA+xevUWiAriwYNPIOIKihcFP5K9CJ4Dkt2LoJDkuMp4mBps2+ldRwJaUMx09b8+urqriv+MloMPhHroJ+vzmAYvJvJ+YDvTPVQYYoBxrKv4H8Rehbt/4+B9YnAev+tq/Az2OjjYw+l5RnvqtIyw38F46mSEOwp3cqqg+Bz3sZPIvuIFPhR0FkqnGGbA9ZAfw0l8Cfl1HMbrFuPDWWm6mYEv4yLexv5jbEYKbhWiH5SML2KSgVcj8rXAbOECLuFbwcHYr3VCKE1bwNu4gnNxukc4jk8F4w1PsZQ6WC44yCM7gYeRhrNYiSDmOmhSNG4BV/iOq4HZDPwNdZtYzbA76rbSSvklN3w79l/hSfy/iZOvZNjiJfP7M63UxXME1/ysgT6Ohs5Ghn9aMl4qtI/qovqcyCZ4gJcFndZC66nLfKRbH2p4N3Q3cGhWmqgbVxcnu/6g2eV0IO161iQaxbcZOJNkrxk4z2K91TX6xnl6WenITN/5wpxAO9GSlgr9p/QDn0PzvQrrNU0AAAAASUVORK5CYII="> Generar Recibo Pago Anticipado</a>
+          </li>
+        </ul>
+        <!-- Acuertos botonera -->
+        <div class="btn-group">
+          <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-layout-text-window" viewBox="0 0 16 16">
+  <path d="M3 6.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5zm0 3a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5zm.5 2.5a.5.5 0 0 0 0 1h5a.5.5 0 0 0 0-1h-5z"/>
+  <path d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm12 1a1 1 0 0 1 1 1v1H1V2a1 1 0 0 1 1-1h12zm1 3v10a1 1 0 0 1-1 1h-2V4h3zm-4 0v11H2a1 1 0 0 1-1-1V4h10z"/>
+</svg>  Contabilidad - SEVEN
+  </button> &nbsp;&nbsp;
+          <?!= include('doc_contable');?>
+        </div>
+        <!-- Fin botonera -->        
+        <!-- Acuertos botonera -->
+        <div class="btn-group">
+          <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-layout-text-window" viewBox="0 0 16 16">
+  <path d="M3 6.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5zm0 3a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5zm.5 2.5a.5.5 0 0 0 0 1h5a.5.5 0 0 0 0-1h-5z"/>
+  <path d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm12 1a1 1 0 0 1 1 1v1H1V2a1 1 0 0 1 1-1h12zm1 3v10a1 1 0 0 1-1 1h-2V4h3zm-4 0v11H2a1 1 0 0 1-1-1V4h10z"/>
+</svg>  Acuerdos UMARIANA
+  </button> &nbsp;&nbsp;
+          <?!= include('doc_acuerdos');?>
+        </div>
+        <!-- Fin botonera -->
+        <div class="vr"></div>
+        <div class="d-flex">&nbsp;&nbsp;
+          <a class="navbar-brand" href="<?= pubUrl ?>"><strong>Cerrar Sesión</strong></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor03" aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+        </div>
+      </div>
+    </nav>
+    <br/>
+    <div class="row">
+      <center>
+        <div class="col">
+          <h5 class="text-primary"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor"
+              class="bi bi-person-circle" viewBox="0 0 16 16">
+              <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
+              <path fill-rule="evenodd"
+                d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z" />
+            </svg> Formulario para Cálculo de Descuento- Matrícula por Créditos Académicos y Porcentajes</h5>
+        </div>
+      </center>
+    </div>
+    <br/>
+    <div class="container">
+      <div class="row gx-5">
+        <!-- ajuste de busquedad -->
+        <div class="row d-flex justify-content-center mb-3">
+          <div class="col">
+            <input type="text" class="form-control text-uppercase fs-5" id="txt_codigoEstudiantil" placeholder="Ingrese el código del estudiante a consultar" aria-label="Código Estudiantil">
+          </div>
+          <div class="col">
+            <button type="button" class="btn btn-warning align-middle" onclick="buscarCodigo()" id="buscarCod"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+  <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+</svg> Buscar Codigo</button>
+          </div>
+          <br>
+        </div>
+        <!-- Fin Ajuste de busquedad -->
+        <hr class="border border-secondary border-3 opacity-75">
+        <form id="formularioRegistro" name="formularioRegistro" class="needs-validation" method="post"
+          action="<?= pubUrl ?>?p=14">
+          <div class="bg-light p-2 rounded">
+            <!--Fecha solicitud retiro, programa academico -->
+            <div class="row">
+              <div class="col">
+                <div class="mb-3">
+                  <label for="progAcademico" class="form-label"><h6 class="my-0">Programa Académico</h6></label>
+                  <input type="text" name="progAcademico" id="progAcademico" class="form-control">
+                </div>
+              </div>
+            </div>
+            <!--Periodo academico , Semestre y Jornada -->
+            <div class="row">
+              <div class="col">
+                <div class="mb-3">
+                  <label for="periodoAcad" class="form-label"><h6 class="my-0">Periodo Académico</h6></label>
+                  <input type="text" name="periodoAcad" value="" id="periodoAcad" class="form-control">
+                </div>
+              </div>
+              <div class="col">
+                <div class="mb-3">
+                  <label for="semestre" class="form-label"><h6 class="my-0">Semestre</h6></label>
+                  <input type="text" name="semestre" id="semestre" class="form-control" placeholder="Semestre-Grupo-Jornada" required>
+                  <input type="text" name="jorCompletar" value="" id="jorCompletar" class="form-control" hidden>
+                </div>
+              </div>
+              <div class="col">
+                <div class="mb-3">
+                  <label for="plan" class="form-label"><h6 class="my-0">Plan de estudios</h6></label>
+                  <input type="text" name="plan" value="" id="plan" class="form-control">
+                </div>
+              </div>
+            </div>
+          </div>
+          <hr class="my-1">
+          <!--No. Documento, Tipo Documento y Genero -->
+          <div class="bg-light p-2 rounded">
+            <div class="row">
+              <div class="col">
+                <div class="mb-3">
+                  <label for="identificacion" class="form-label"><h6 class="my-0">No. Identificación *</h6></label>
+                  <input type="text" name="identificacion" id="identificacion" class="form-control" placeholder="Número de Identificación, sin caracteres especiales" required>
+                </div>
+              </div>
+              <div class="col">
+                <div class="mb-3">
+                  <label for="tipoDocumento" class="form-label"><h6 class="my-0">Tipo Documento</h6></label>
+                  <input type="text" name="tipoDocumento" value="" id="tipoDocumento" class="form-control">
+                </div>
+              </div>
+              <div class="col">
+                <div class="mb-3">
+                  <label for="genero" class="form-label"><h6 class="my-0">Genero</h6></label>
+                  <input type="text" name="genero" value="" id="genero" class="form-control">
+                </div>
+              </div>
+            </div>
+
+            <!--apellidos - nombres, codigo , celular -->
+            <div class="row">
+              <div class="col">
+                <div class="mb-3">
+                  <label for="apellidosNombres" class="form-label"><h6 class="my-0">Apellidos - Nombres *</h6></label>
+                  <input type="text" name="apellidosNombres" id="apellidosNombres" class="form-control text-uppercase" placeholder="Apellidos y nombres" required>
+                </div>
+              </div>
+              <div class="col">
+                <div class="mb-3">
+                  <label for="codigoEstudiantil" class="form-label"><h6 class="my-0">Código Estudiantil *</h6></label>
+                  <input type="text" name="codigoEstudiantil" id="codigoEstudiantil" class="form-control text-uppercase" placeholder="Codigo Estudiantil" required>
+                </div>
+              </div>
+              <div class="col">
+                <div class="mb-3">
+                  <label for="celular" class="form-label"><h6 class="my-0">Celular *</h6></label>
+                  <input type="text" name="celular" id="celular" class="form-control" placeholder="Numero de celular" required>
+                </div>
+              </div>
+            </div>
+            <!-- ingreso correo electronico -->
+            <div class="row">
+              <div class="col-md-3 mb-3">
+                <div>
+                  <label for="correoElectronico" class="form-label"><h6 class="my-0">Correo Electrónico *</h6></label>
+                  <input type="email" name="correoElectronico" id="correoElectronico" class="form-control" placeholder="name@example.com" required>
+                </div>
+              </div>
+
+              <div class="col-md-3">
+                <!--prueba de ventana lateral-->
+                <label><h6 class="my-0">Consultar Asignaturas</h6></label>
+                <a class="btn btn-warning" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button"
+                  aria-controls="offcanvasExample" title="Ayuda">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                    class="bi bi-layout-text-window-reverse" viewBox="0 0 16 16">
+                    <path
+                      d="M13 6.5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h5a.5.5 0 0 0 .5-.5zm0 3a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h5a.5.5 0 0 0 .5-.5zm-.5 2.5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1 0-1h5z" />
+                    <path
+                      d="M14 0a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h12zM2 1a1 1 0 0 0-1 1v1h14V2a1 1 0 0 0-1-1H2zM1 4v10a1 1 0 0 0 1 1h2V4H1zm4 0v11h9a1 1 0 0 0 1-1V4H5z" />
+                  </svg> Asignaturas | Créditos
+                </a>
+                <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample"
+                  aria-labelledby="offcanvasExampleLabel">
+                  <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasExampleLabel">Plan de Estudio</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                  </div>
+                  <div class="offcanvas-body">
+                    <div>
+                      Verifique el número de créditos antes de generar el recibo de pago
+                    </div>
+                    <div class="dropdown mt-3">
+                      <table id="manteniemientosTable" class="table table-striped">
+                        <thead>
+                          <tr>
+                            <th>Semestre</th>
+                            <th>Asignatura</th>
+                            <th>Créditos Académicos</th>
+                          </tr>
+                        </thead>
+                        <tbody id="manteniemientosTableBody">
+                          <!-- aqui se insertara los resultados de busqueda-->
+                        </tbody>
+                      </table>
+                      <template id="manteniemientosRow">
+                        <tr>
+                          <td class="mantenimientosSemestre"></td>
+                          <td class="mantenimientosPrograma"></td>
+                          <td class="mantenimientosCreditos" align="center"></td>
+                        </tr>
+                      </template>
+                    </div>
+                  </div>
+                </div>
+                <!-- Fin prueba ventana lateral-->
+              </div>
+            </div>
+            <!-- fin ingreso correo electronico-->
+          </div>
+          <hr class="my-1">
+          <center>
+            <div class="col">
+              <p class="text-justify">
+              <h5><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABmJLR0QA/wD/AP+gvaeTAAAB40lEQVRYhe3Vv49MURQH8M9i/WpoBBEkshtRKSRsQ7aYyOgkW4yVaDSiYwu1iE4iEtk/gXazDYWEioQJoWFDphC2QCG2wiZG8c7Y8ebNu6yZ0cw3ObnvvnPPOd977rnnMsQQ/xkjbd8bcREHsaZP8X7gOW7ga145i+aA5GYRu4UBEnjVCtqe6tG2NNXj+3GMT8LwGZbDwRIWQ5bi33KsaYZNu496+Ib1RRlohOFMkKnJamQ6iE5hE6rYhgmMhUzEv2qsmQqb6fBRC58zEaNRRqBSpOwRKnkC/ar2/RFsZ2phvwhcwj2cTC1cl9DvwoYS/SK+tc13YB6HYz6LSZzB9xSZfA1ckL5OL3M+Wr3kHMZxNebnQ99RA2UZ+BS7K8vA+9x8b4xP8QaXMYeP3RyU1cAtWXseKZHjOZu5GOt4geuyTb4rifMLvbqGVdyOoE1Z85kO3V9dw6rsjBshr3E2EXwrHuI09uCELFOnuhmUETiCA9gXMo5jCQL38VbWGdfKuiKdtVKI/BGM4mjMK7LrtDnhYxKf/X5TFrA79B1HUEZgtdgiK8Ymrlh55AoJpBrRavAF13AXD2QvZFf0gwA8CkmiiEANh3pKZwVjZcpWDQxCCmvgDrb/0/7+HB8GFGeIIdL4Capyw7/jO1ZlAAAAAElFTkSuQmCC"> Seleccione a continuación, el semestre y número de créditos académicos, para realizar el cálculo del recibo a generar.
+                <br>( valores de pago 1-2023).
+              </h5>
+              </p>
+              <hr>
+              <p class="text-lg-start"><b>Recuerde:</b> Solo se debe atender por este medio a estudiantes de segundo a
+                décimo semestre que requieran un recibo con descuento por un valor diferente al total de la matrícula.
+                <br>Estudiantes de primer semestre deben descargar su recibo producto del proceso de admisión, a traves del Ruah Académico.<br>Recibos por el valor total de la matricula deben hacerlo por el link de
+                <b>Zona Pagos</b><br>
+               Tener presente que al hacer clic sobre el botón <b> Generar formato de pago parcial con descuento</b>, el
+                aplicativo generará un recibo en formato PDF, que podrá ser entregado al estudiante. Antes de generar el
+                recibo, verifique en el sistema Ruah Académico si el estudiante es regular académicamente y por
+                situaciones especiales no cursará algunos créditos del semestre al cual pertenece, que es la condición
+                para utilizar esta opcion del aplicativo.
+              </p>
+              <hr>
+              <p id="progCal" class="text-primary">Programa a generar cálculo</p>
+              <input type="text" name="tipodat" value="" id="tipodat" class="form-control" hidden>
+            </div>
+            <hr class="my-1">
+          </center>
+          <div class="container bg-light">
+            <div class="row border-3">
+              <div class="col col-lg-6 border-end">
+                <div class="row">
+                  <div class="col col-lg-4">
+                    <div class="mb-3 badge bg-secondary text-wrap">
+                      <label for="semestre_cal" class="form-label"><h6 class="my-0"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-plus-fill" viewBox="0 0 16 16">
+  <path d="M1 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+  <path fill-rule="evenodd" d="M13.5 5a.5.5 0 0 1 .5.5V7h1.5a.5.5 0 0 1 0 1H14v1.5a.5.5 0 0 1-1 0V8h-1.5a.5.5 0 0 1 0-1H13V5.5a.5.5 0 0 1 .5-.5z"/>
+</svg> Semestre</h6></label>
+                      <select class="form-select" id="semestre_cal" name="semestre_cal" required>
+                      <option value="" selected>Sem. a cursar</option>
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>     
+                      <option value="4">4</option>
+                      <option value="5">5</option>
+                      <option value="6">6</option> 
+                      <option value="7">7</option> 
+                      <option value="8">8</option> 
+                      <option value="9">9</option> 
+                      <option value="10">10</option> 
+              </select>
+                    </div>
+                  </div>
+                  <div class="col col-lg-4">
+                    <div class="mb-3 badge bg-secondary text-wrap">
+                      <label for="creditos_cal" class="form-label"><h6 class="my-0"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-circle-dotted" viewBox="0 0 16 16">
+  <path d="M8 0c-.176 0-.35.006-.523.017l.064.998a7.117 7.117 0 0 1 .918 0l.064-.998A8.113 8.113 0 0 0 8 0zM6.44.152c-.346.069-.684.16-1.012.27l.321.948c.287-.098.582-.177.884-.237L6.44.153zm4.132.271a7.946 7.946 0 0 0-1.011-.27l-.194.98c.302.06.597.14.884.237l.321-.947zm1.873.925a8 8 0 0 0-.906-.524l-.443.896c.275.136.54.29.793.459l.556-.831zM4.46.824c-.314.155-.616.33-.905.524l.556.83a7.07 7.07 0 0 1 .793-.458L4.46.824zM2.725 1.985c-.262.23-.51.478-.74.74l.752.66c.202-.23.418-.446.648-.648l-.66-.752zm11.29.74a8.058 8.058 0 0 0-.74-.74l-.66.752c.23.202.447.418.648.648l.752-.66zm1.161 1.735a7.98 7.98 0 0 0-.524-.905l-.83.556c.169.253.322.518.458.793l.896-.443zM1.348 3.555c-.194.289-.37.591-.524.906l.896.443c.136-.275.29-.54.459-.793l-.831-.556zM.423 5.428a7.945 7.945 0 0 0-.27 1.011l.98.194c.06-.302.14-.597.237-.884l-.947-.321zM15.848 6.44a7.943 7.943 0 0 0-.27-1.012l-.948.321c.098.287.177.582.237.884l.98-.194zM.017 7.477a8.113 8.113 0 0 0 0 1.046l.998-.064a7.117 7.117 0 0 1 0-.918l-.998-.064zM16 8a8.1 8.1 0 0 0-.017-.523l-.998.064a7.11 7.11 0 0 1 0 .918l.998.064A8.1 8.1 0 0 0 16 8zM.152 9.56c.069.346.16.684.27 1.012l.948-.321a6.944 6.944 0 0 1-.237-.884l-.98.194zm15.425 1.012c.112-.328.202-.666.27-1.011l-.98-.194c-.06.302-.14.597-.237.884l.947.321zM.824 11.54a8 8 0 0 0 .524.905l.83-.556a6.999 6.999 0 0 1-.458-.793l-.896.443zm13.828.905c.194-.289.37-.591.524-.906l-.896-.443c-.136.275-.29.54-.459.793l.831.556zm-12.667.83c.23.262.478.51.74.74l.66-.752a7.047 7.047 0 0 1-.648-.648l-.752.66zm11.29.74c.262-.23.51-.478.74-.74l-.752-.66c-.201.23-.418.447-.648.648l.66.752zm-1.735 1.161c.314-.155.616-.33.905-.524l-.556-.83a7.07 7.07 0 0 1-.793.458l.443.896zm-7.985-.524c.289.194.591.37.906.524l.443-.896a6.998 6.998 0 0 1-.793-.459l-.556.831zm1.873.925c.328.112.666.202 1.011.27l.194-.98a6.953 6.953 0 0 1-.884-.237l-.321.947zm4.132.271a7.944 7.944 0 0 0 1.012-.27l-.321-.948a6.954 6.954 0 0 1-.884.237l.194.98zm-2.083.135a8.1 8.1 0 0 0 1.046 0l-.064-.998a7.11 7.11 0 0 1-.918 0l-.064.998zM8.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3v-3z"/>
+</svg> Nro. Créditos</h6></label>
+                      <input type="text" name="creditos_cal" id="creditos_cal" class="form-control" placeholder="Nro. Créditos" required>
+                    </div>
+                  </div>
+
+                  <!-- boton de generar calculo-->
+                  <div class="col col-lg-4">
+                    <button type="button" class="btn btn-primary align-middle" onclick="calculoRecibo()" id="calculorec"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-file-earmark-spreadsheet" viewBox="0 0 16 16">
+  <path d="M14 14V4.5L9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2zM9.5 3A1.5 1.5 0 0 0 11 4.5h2V9H3V2a1 1 0 0 1 1-1h5.5v2zM3 12v-2h2v2H3zm0 1h2v2H4a1 1 0 0 1-1-1v-1zm3 2v-2h3v2H6zm4 0v-2h3v1a1 1 0 0 1-1 1h-2zm3-3h-3v-2h3v2zm-7 0v-2h3v2H6z"/>
+</svg> Calcular pago</button>
+                  </div>
+                  <!-- fin de boton de generar calculo-->
+                </div>
+                <br>
+                <div class="row">
+                  <div class="col col-lg-6">
+                    <p id="vlr_cre">Valor Crédito Académico: </p>
+                  </div>
+                  <div class="col col-lg-6 align-middle">
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABmJLR0QA/wD/AP+gvaeTAAAC2klEQVRYhe3XS4jVdRQH8M+MzUsldaIxCDEsNbVgSijFhRiChtrDTZAiSgQuBBGFoGgnuJKiTfRAKMxAI6R80CKlNPNRmha6KApj0EIEI5WaTFucc3G43v+d+786tPG7+t/fOb9zzv88vud/uY3/GS1N3BmNxzEWd+MKfsHXODdUAbRhKZ7HcHyJs+lwGMZjPn7GumYCqYeH8C1ewz2D6D6JY5hyq5xPxyk83KD+7LxzEh/j6ZtxPgrfYWqD+vMwDa35ezLexhZRptLYgNUl9Iuy9CpeLut8GH5AR4O6BzGjQN4mMtledLkWekXzbWkggJXowhL0iCb8Z4D8atr7HX3Vl1urDxL3i86vh0l4HU9lEHNwCQfwXJVuHybUMnJHgfEW9Nc4fySNz8FveB9rcC3lb2ATPkQ33szzy+gsE0B/lWxCGv8T27AeFwvuXsRifIWtOI+R+LWWclEPjMJcfIox2CkY7gOMEG+/LA2PSYen8WgGfkE08AM4ihXYIfqgIbQLboeXsBx3YZGY73bcmS/QmkF14F7BB12CkN5KG0cUlKDeLvgijfem0zN53oG/MRML8K/I1DcDZMSy+lFMBcGSDaMTJ0Tt94hZXiUmYz++F7VdiGfwh5j1/RnICxnMRtyH44O87A0Yh0/yuT1/f56BSGObBfk8ISjXAP19YlVXcEBBCYp4oE/s/aVpsNJYFYK5JjLQlrLzA+72i0loEcS0VpTvrwJfhegWTLgqje0VOx8ew2GR5hGiNL0pexa78nm9WONdZZ1XMB3v5nMP3hM1/kjUtoKJ2J6ydzJ4ojnHNeucSO9xBYtkEIwWWaqLwfb0VdFMk8XblcE6wSVHSt67ASPFLPeUuDM+HTeTuZqYh89cH8N66BQkNvNWOa9gtfjOq/eRMhy7BRENCV7EITGG1Zgl+mRJGYPN/DGZIuZ7rOiNyr7owyv4aagDqKAbDwpWPCWY8jZK4z/zmIpjmezMbwAAAABJRU5ErkJggg=="> 1 a 5 Semestre
+                    <br>(pago por Créditos Académicos)
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col">
+                    <p id="vlr_total">Valor total: </p>
+                  </div>
+                  <div class="col border-top">
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABmJLR0QA/wD/AP+gvaeTAAAC2klEQVRYhe3XS4jVdRQH8M+MzUsldaIxCDEsNbVgSijFhRiChtrDTZAiSgQuBBGFoGgnuJKiTfRAKMxAI6R80CKlNPNRmha6KApj0EIEI5WaTFucc3G43v+d+786tPG7+t/fOb9zzv88vud/uY3/GS1N3BmNxzEWd+MKfsHXODdUAbRhKZ7HcHyJs+lwGMZjPn7GumYCqYeH8C1ewz2D6D6JY5hyq5xPxyk83KD+7LxzEh/j6ZtxPgrfYWqD+vMwDa35ezLexhZRptLYgNUl9Iuy9CpeLut8GH5AR4O6BzGjQN4mMtledLkWekXzbWkggJXowhL0iCb8Z4D8atr7HX3Vl1urDxL3i86vh0l4HU9lEHNwCQfwXJVuHybUMnJHgfEW9Nc4fySNz8FveB9rcC3lb2ATPkQ33szzy+gsE0B/lWxCGv8T27AeFwvuXsRifIWtOI+R+LWWclEPjMJcfIox2CkY7gOMEG+/LA2PSYen8WgGfkE08AM4ihXYIfqgIbQLboeXsBx3YZGY73bcmS/QmkF14F7BB12CkN5KG0cUlKDeLvgijfem0zN53oG/MRML8K/I1DcDZMSy+lFMBcGSDaMTJ0Tt94hZXiUmYz++F7VdiGfwh5j1/RnICxnMRtyH44O87A0Yh0/yuT1/f56BSGObBfk8ISjXAP19YlVXcEBBCYp4oE/s/aVpsNJYFYK5JjLQlrLzA+72i0loEcS0VpTvrwJfhegWTLgqje0VOx8ew2GR5hGiNL0pexa78nm9WONdZZ1XMB3v5nMP3hM1/kjUtoKJ2J6ydzJ4ojnHNeucSO9xBYtkEIwWWaqLwfb0VdFMk8XblcE6wSVHSt67ASPFLPeUuDM+HTeTuZqYh89cH8N66BQkNvNWOa9gtfjOq/eRMhy7BRENCV7EITGG1Zgl+mRJGYPN/DGZIuZ7rOiNyr7owyv4aagDqKAbDwpWPCWY8jZK4z/zmIpjmezMbwAAAABJRU5ErkJggg=="> 6 a 10 Semestre
+                    <br>(pago por Porcentaje)
+                  </div>
+                </div>
+              </div>
+              <div class="col border-start">
+                <div class="row">
+                  <div class="col fs-5">
+                    <p id="des_5">(Alivio económico 5%)</p>
+                    <input type="text" name="des_5_env" value="" id="des_5_env" class="form-control" hidden>
+                    <p id="des_3">(Alivio económico 3%)</p>
+                    <input type="text" name="des_3_env" value="" id="des_3_env" class="form-control" hidden>
+                    <p id="des_2">(Alivio económico 2%)</p>
+                    <input type="text" name="des_2_env" value="" id="des_2_env" class="form-control" hidden>
+                    <input type="text" name="des_ord_env" value="" id="des_ord_env" class="form-control" hidden>
+                    <p id="des_ord">(Valor ordinario)</p>
+                    <p id="des_ext">(Valor extraordinario)</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <hr class="my-1">
+          <div class="bg-light p-2 rounded">
+            <!--Observaciones Programa-->
+            <div class="mb-3">
+              <label for="obsPrograma" class="form-label"><h6 class="my-0">Observaciones Programa</h6><p id="msg2"></p></label>
+              <textarea class="form-control" id="obsPrograma" name="obsPrograma" rows="3" required></textarea>
+            </div>
+          </div>
+          <!--Boton de envio de informacion -->
+          <button class="w-100 btn btn-primary btn-lg" type="submit" id="liveToastBtn"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-save2" viewBox="0 0 16 16">
+  <path d="M2 1a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H9.5a1 1 0 0 0-1 1v4.5h2a.5.5 0 0 1 .354.854l-2.5 2.5a.5.5 0 0 1-.708 0l-2.5-2.5A.5.5 0 0 1 5.5 6.5h2V2a2 2 0 0 1 2-2H14a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h2.5a.5.5 0 0 1 0 1H2z"/>
+</svg> Generar formato de pago parcial con descuento </button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mensaje Toast -->
+  <div class="toast-container position-fixed bottom-0 end-0 p-3">
+    <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+      <div class="toast-header">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-send"
+          viewBox="0 0 16 16">
+          <path
+            d="M15.854.146a.5.5 0 0 1 .11.54l-5.819 14.547a.75.75 0 0 1-1.329.124l-3.178-4.995L.643 7.184a.75.75 0 0 1 .124-1.33L15.314.037a.5.5 0 0 1 .54.11ZM6.636 10.07l2.761 4.338L14.13 2.576 6.636 10.07Zm6.787-8.201L1.591 6.602l4.339 2.76 7.494-7.493Z" />
+        </svg>
+        <strong class="me-auto">Enviando Correo</strong>
+        <small>Procesando Información</small>
+        <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+      </div>
+      <div class="toast-body">
+        Generando documento PDF para entregar al estudiante!.
+      </div>
+    </div>
+  </div>
+  <!-- Fin Mensaje Toast -->
+  <!-- Mensaje Toast buscar codigo-->
+  <div class="toast-container position-fixed bottom-0 end-0 p-3">
+    <div id="liveToast3" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+      <div class="toast-header">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-send"
+          viewBox="0 0 16 16">
+          <path
+            d="M15.854.146a.5.5 0 0 1 .11.54l-5.819 14.547a.75.75 0 0 1-1.329.124l-3.178-4.995L.643 7.184a.75.75 0 0 1 .124-1.33L15.314.037a.5.5 0 0 1 .54.11ZM6.636 10.07l2.761 4.338L14.13 2.576 6.636 10.07Zm6.787-8.201L1.591 6.602l4.339 2.76 7.494-7.493Z" />
+        </svg>
+        <strong class="me-auto">Buscando código</strong>
+        <small>Procesando Información</small>
+        <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+      </div>
+      <div class="toast-body">
+        Buscando codigo del estudiante para calculo de recibo parcial
+      </div>
+    </div>
+  </div>
+  <!-- Fin Mensaje Toast buscar codigo -->
+
+  <!-- Fin Mensaje Envio -->
+  <br><br>
+  <script>
+    //Se valida la aparicion del toast siempre y cuando el formulario este diligenciado
+  var forms = document.querySelectorAll('.needs-validation')
+  const toastTrigger = document.getElementById('liveToastBtn')
+  const toastLiveExample = document.getElementById('liveToast')
+  if (toastTrigger) {
+    toastTrigger.addEventListener('click', () => {
+      if(forms[0].checkValidity()){
+        const toast = new bootstrap.Toast(toastLiveExample)
+        toast.show()
+      }
+  })
+} 
+
+//Se valida la aparicion del toast siempre y cuando se pulse en el boton buscar codigo
+  var forms = document.querySelectorAll('.needs-validation')
+  const toastTriggerCod = document.getElementById('buscarCod')
+  const toastLiveCod = document.getElementById('liveToast3')
+  if (toastTriggerCod) {
+    toastTriggerCod.addEventListener('click', () => {
+        const toastC = new bootstrap.Toast(toastLiveCod)
+        toastC.show()
+  })
+} 
+
+//-------------------------------------------------
+// Funcion para buscar codigo de estudiante matriculado en periodo 2-2022, esto debe luego ser
+// actualizado a consulta por api rest
+  function buscarCodigo(){
+    var elementbus=(document.getElementById("txt_codigoEstudiantil").value).trim();
+    if(elementbus===""){
+      swal('Error en busqueda','Debe digitar un código a buscar','error');
+    }
+    else{  
+      const codigoEstudiante = (document.getElementById("txt_codigoEstudiantil").value).trim();
+      google.script.run
+      .withSuccessHandler(info =>{
+          if(info.length > 0){
+            info.forEach( mantenimiento =>{
+              document.getElementById("codigoEstudiantil").value  = mantenimiento[0];
+              document.getElementById("identificacion").value  = mantenimiento[1];
+              document.getElementById("periodoAcad").value  = mantenimiento[2];
+              document.getElementById("tipoDocumento").value  = mantenimiento[3];
+              document.getElementById("apellidosNombres").value  = mantenimiento[4];
+              document.getElementById("genero").value  = mantenimiento[5];
+              document.getElementById("progAcademico").value  = mantenimiento[6];
+              document.getElementById("semestre").value  = mantenimiento[7].toString();
+              document.getElementById("plan").value  = mantenimiento[8];
+              document.getElementById("correoElectronico").value  = mantenimiento[9];
+              document.getElementById("celular").value  = mantenimiento[10]; 
+              var jor_completar = mantenimiento[7].split('-')[2];
+              //console.log('Dato encontrado:'+mantenimiento[7].split('-')[2])
+              // Ajustando jornada de acuerdo a los datos obtenidos en la busquedad
+              switch(jor_completar){
+                case "M":
+                  document.getElementById("jorCompletar").value  = "MAÑANA";
+                  //console.log('Se cumple: Mañana');              
+                break;
+                case "T":
+                  document.getElementById("jorCompletar").value  = "TARDE"; 
+                  //console.log('Se cumple: Tarde');       
+                break;
+                case "N":
+                  document.getElementById("jorCompletar").value  = "NOCHE"; 
+                  //console.log('Se cumple: Noche');     
+                break;
+                case "FS":
+                  document.getElementById("jorCompletar").value  = "FIN DE SEMANA"; 
+                  //console.log('Se cumple: Fin de Semana');     
+                break;                                          
+              }// Fin switch de completar campo
+
+              //document.getElementById("fecsolretiro").focus();
+              // document.getElementById("fecsolretiro").style.backgroundColor="#FDFD96";
+              document.getElementById("obsPrograma").style.backgroundColor="#FDFD96";
+// Generando asignaturas y semestres
+      google.script.run
+      .withSuccessHandler( mantenimientos =>{
+        let tableBody = document.getElementById("manteniemientosTableBody");
+        var templateBox = document.getElementById("manteniemientosRow");
+        var template = templateBox.content;
+        mantenimientos.forEach(mantenimiento=>{
+            let tr = template.cloneNode(true);
+            let colPeriodo= tr.querySelector(".mantenimientosSemestre");
+            let colPrograma = tr.querySelector(".mantenimientosPrograma");
+            let colCredito = tr.querySelector(".mantenimientosCreditos");  
+ 
+            colPeriodo.innerHTML  = "<h5>"+mantenimiento[1]+"<h5>";
+            colPrograma.textContent = mantenimiento[2];
+            colCredito.textContent  = mantenimiento[3];            
+          tableBody.appendChild( tr );
+
+        })
+      })
+      .buscarProgramaCred(mantenimiento[6].toString().toLocaleUpperCase());
+// Finalizando generación de asiganturas
+
+            })
+          }else {
+            swal('Error en busqueda','No se encontro coincidencia con el codigo buscado','error');
+          }
+      })
+      .buscarCodigo(codigoEstudiante.toString().toLocaleUpperCase());
+    }// Fin validacion codigo para envio a busqueda
+  }//Fin buscar registro
+
+  //------------------------------------------------------------------------------
+  // Ajustar esta funcion por cada semestre que se ajuste tarifas de pago para el siguiente semestre
+    function calculoRecibo(){
+              //Lanzar funcion para consultar programa en valores matricula
+              const ProgramaBus = (document.getElementById("progAcademico").value).trim()+'-'+document.getElementById("semestre_cal").value+'-1-2023';
+             // console.log('Que es esto:'+ProgramaBus);
+              google.script.run
+            .withSuccessHandler(info =>{
+                if(info.length > 0){
+                 // console.log('Encontro coincidencia:'+info.length+ ' Que es esto: '+info);
+                  info.forEach( mantenimiento =>{
+                    //console.log('Dato1 : '+parseFloat(mantenimiento[7])+ 'Otro dato a operar: '+Number(document.getElementById("creditos_cal").value)+' Finalmente: '+parseInt(mantenimiento[7])* Number(document.getElementById("creditos_cal").value));
+                    var res_5=0, res_3=0, res_2=0, res_ord=0, res_ext=0;
+                    if(mantenimiento[5] === ''){
+                      // Calculo por porcentaje
+                    if(parseInt(document.getElementById("creditos_cal").value) <= 4){ 
+                      //console.log('entro 25%');
+                       //swal('Calculo por Porcentaje','Se realiza cálculo del 25 porciento','Atención');
+                      progCal.innerHTML = "<h4 class='my-0 text-primary'>"+mantenimiento[2]+" - <b>Cálculo 25% vlr. Total Matrícula</b>"+" <b> - ("+mantenimiento[3]+" Semestre: C.A. "+mantenimiento[4]+")</b></h4>"; 
+                      document.getElementById("tipodat").value  = "PORCENTAJE"; 
+                      res_5 = ((mantenimiento[6]*25)/100)-((((mantenimiento[6]*25)/100)*5)/100); 
+                      res_3 = ((mantenimiento[6]*25)/100)-((((mantenimiento[6]*25)/100)*3)/100); 
+                      res_2 = ((mantenimiento[6]*25)/100)-((((mantenimiento[6]*25)/100)*2)/100);     
+                      res_ord = (mantenimiento[6]*25)/100;
+                      res_ext = ((mantenimiento[6]*25)/100)+((((mantenimiento[6]*25)/100)*5)/100);   
+                      //var x=Math.round(res_5);
+                      //console.log('Dato redondeado- res_5:  Respuesta:'+x);
+                     }
+                     else if(parseInt(document.getElementById("creditos_cal").value) > 4 && parseInt(document.getElementById("creditos_cal").value) < 9){
+                      progCal.innerHTML = "<h4 class='my-0 text-primary'>"+mantenimiento[2]+" - <b>Cálculo 50% vlr. Total Matrícula</b>"+" <b> - ("+mantenimiento[3]+" Semestre: C.A. "+mantenimiento[4]+")</b></h4>"; 
+                      document.getElementById("tipodat").value  = "PORCENTAJE";
+                      res_5 = ((mantenimiento[6]*50)/100)-((((mantenimiento[6]*50)/100)*5)/100); 
+                      res_3 = ((mantenimiento[6]*50)/100)-((((mantenimiento[6]*50)/100)*3)/100); 
+                      res_2 = ((mantenimiento[6]*50)/100)-((((mantenimiento[6]*50)/100)*2)/100);     
+                      res_ord = (mantenimiento[6]*50)/100;
+                      res_ext = ((mantenimiento[6]*50)/100)+((((mantenimiento[6]*50)/100)*5)/100);    
+                     }
+                     else if(parseInt(document.getElementById("creditos_cal").value) >= 9 && parseInt(document.getElementById("creditos_cal").value) <= getNumbersInString(mantenimiento[4])){
+                      progCal.innerHTML = "<h4 class='my-0 text-primary'>"+mantenimiento[2]+" - <b>Cálculo 100% vlr. Total Matrícula</b>"+" <b> - ("+mantenimiento[3]+" Semestre: C.A. "+mantenimiento[4]+")</b></h4>"; 
+                      document.getElementById("tipodat").value  = "PORCENTAJE";
+                      res_5 = mantenimiento[6]-((mantenimiento[6]*5)/100);
+                      res_3 = mantenimiento[6]-((mantenimiento[6]*3)/100); 
+                      res_2 = mantenimiento[6]-((mantenimiento[6]*2)/100);     
+                      res_ord = mantenimiento[6];
+                      res_ext = mantenimiento[6]+((mantenimiento[6]*5)/100);   
+                     } 
+                     else{
+                       swal('Error en cálculo','No se encuentra dentro de los parametros de cálculo','error');
+                     }                   
+                    }//cierre if
+                    else{
+                     // swal('A tener presente','Solo se debe atender por este medio a estudiantes de segundo a décimo semestre que requieran un recibo con descuento por un valor diferente al total de la matrícula. \nEstudiantes de primer semestre deben descargar su recibo producto del proceso de admisión de estudiantes\n Recibos por el valor total de la matricula deben hacerlo por el link de Zona Pagos.','info');
+                      // Calculo por creditos academicos
+                      progCal.innerHTML = "<h4 class='my-0 text-primary'>"+mantenimiento[2]+" - <b>Cálculo por "+document.getElementById("creditos_cal").value+" Créditos Académicos</b>"+" <b> - ("+mantenimiento[3]+" Semestre: C.A. "+mantenimiento[4]+")</b></h4>"; 
+                     document.getElementById("tipodat").value  = "CRÉDITOS ACADÉMICOS"; 
+                     // mantenimiento[5] creditos academicos
+                     res_5 = (mantenimiento[5]*parseInt(document.getElementById("creditos_cal").value))-(((mantenimiento[5]*parseInt(document.getElementById("creditos_cal").value))*5)/100);
+                     res_3 = (mantenimiento[5]*parseInt(document.getElementById("creditos_cal").value))-(((mantenimiento[5]*parseInt(document.getElementById("creditos_cal").value))*3)/100);     
+                     res_2 = (mantenimiento[5]*parseInt(document.getElementById("creditos_cal").value))-(((mantenimiento[5]*parseInt(document.getElementById("creditos_cal").value))*2)/100);      
+                     res_ord = mantenimiento[5]*parseInt(document.getElementById("creditos_cal").value); 
+                     res_ext = mantenimiento[5]*parseInt(document.getElementById("creditos_cal").value)+(((mantenimiento[5]*parseInt(document.getElementById("creditos_cal").value))*5)/100);
+                    }      
+
+                    //Number((53863).toPrecision(2))                                           
+                    vlr_cre.innerHTML = "<h5 class='my-0 text-dark'>Valor Crédito Académico:<br>"+formatterPeso.format(mantenimiento[5])+"</b></h5>";
+                    vlr_total.innerHTML = "<h5 class='my-0 text-dark'>Valor total:<br>"+formatterPeso.format(mantenimiento[6])+"</b></h5>";
+                    des_5.innerHTML = "<h5 class='my-0 text-dark'><b>"+formatterPeso.format(redondear(res_5))+" </b>(Alivio económico 5%) - Hasta el 15 de diciembre de 2022</h5>";
+                    des_3.innerHTML = "<h5 class='my-0 text-dark'><b>"+formatterPeso.format(redondear(res_3))+" </b>(Alivio económico 3%) Del 16 al 30 de diciembre de 2022</h5>";
+                    des_2.innerHTML = "<h5 class='my-0 text-dark'><b>"+formatterPeso.format(redondear(res_2))+" </b>(Alivio económico 2%) Del 2 al 12 de enero de 2023</h5>";
+                    des_ord.innerHTML = "<h5 class='my-0 text-dark'><b>"+formatterPeso.format(redondear(res_ord))+" </b>(Valor ordinario) Recibos generados a partir del 13 de enero desde Ruah Académico</h5>";   
+                    des_ext.innerHTML = "<h5 class='my-0 text-dark'><b>"+formatterPeso.format(redondear(res_ext))+" </b>(Valor extraordinario) Incremento del 5% sobre el valor normal de matrícula</h5>"; 
+                    //alimentando inputs ocultos para envio de datos
+                    document.getElementById("des_5_env").value  = redondear(res_5); 
+                    document.getElementById("des_3_env").value  = redondear(res_3); 
+                    document.getElementById("des_2_env").value  = redondear(res_2); 
+                    document.getElementById("des_ord_env").value  = redondear(res_ord); 
+                    //Finalizando alimentación de inputs                                                       
+                  }) //fin foreach
+                }else {
+                  swal('Error en busqueda','No se encontro coincidencia con el programa del estudiante o no se ha realizado la busqueda del codigo estudiantil','error');
+                }
+            })
+            .buscarPrograma(ProgramaBus.toString());
+    }
+//------------------------------------------------------------------------------
+function getNumbersInString(string) {
+  var tmp = string.split("");
+  var map = tmp.map(function(current) {
+    if (!isNaN(parseInt(current))) {
+      return current;
+    }
+  });
+
+  var numbers = map.filter(function(value) {
+    return value != undefined;
+  });
+
+  return numbers.join("");
+}
+//Formatear valor numerico para mostrar en tipo moneda
+    const formatterPeso = new Intl.NumberFormat('es-CO', {
+       style: 'currency',
+       currency: 'COP',
+       minimumFractionDigits: 0
+     })
+//Funcion para redondear a la decena mas proxima 
+function redondear(num) {
+  return Math.round(num / 100) * 100;
+}     
+
+  </script>
+
+  <?!= include('JS');?>
+</body>
+
+</html>
